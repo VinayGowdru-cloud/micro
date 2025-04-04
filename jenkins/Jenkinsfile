@@ -27,6 +27,13 @@ pipeline{
                 sh 'free -h'
             }
         }
+        stage('CPU detailes'){
+            steps{
+                sh 'lscpu'
+            }
+        }
+        
+        
     }
 
 }
