@@ -1,0 +1,32 @@
+pipeline{
+    agent any
+
+    stages{
+        stage('server detalis') {
+            steps{
+                echo "this will print server detalis"
+            }
+        }
+        stage('Detalis of server') {
+            steps{
+                sh 'uname -a'
+            }
+        }
+        stage('Date of server') {
+            steps{
+                sh 'date'
+            }
+        }
+        stage('Disk usage') {
+            steps{
+                sh 'df -h'
+            }
+        }
+        stage('memory usage') {
+            steps{
+                sh 'free -h'
+            }
+        }
+    }
+
+}
